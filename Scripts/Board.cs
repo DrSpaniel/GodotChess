@@ -143,6 +143,12 @@ public class Board
 		return currentState.turnColor;
 	}
 
+    // Set turn color (used for RPS game)
+	public void SetTurnColor(Piece.Color color)
+	{
+		currentState.turnColor = color;
+	}
+
     // find king
 
     public int FindKingOfColor(Piece.Color color)

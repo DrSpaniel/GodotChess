@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://014wlx7s1u0b"]
+[gd_scene load_steps=17 format=3 uid="uid://014wlx7s1u0b"]
 
 [ext_resource type="Script" path="res://Scripts/ChessGame.cs" id="1_8wyvt"]
 [ext_resource type="Script" path="res://Scripts/BoardGraphics.cs" id="1_23jwv"]
@@ -15,12 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://7r0kgyqub0eg" path="res://Scenes/SettingsMenu.tscn" id="16_dam84"]
 [ext_resource type="AudioStream" uid="uid://bhymswa7w6n5y" path="res://Assets/Sounds/game-start.ogg" id="16_qh4h4"]
 [ext_resource type="AudioStream" uid="uid://bjrl81iaimayq" path="res://Assets/Sounds/game-end.ogg" id="17_jixsu"]
+[ext_resource type="PackedScene" uid="uid://dwpglw7u3mgjh" path="res://Scenes/RPS/RockPaperScissors.tscn" id="18_irvb4"]
 
 [node name="ChessGame" type="Node" node_paths=PackedStringArray("gameEndLabel")]
 script = ExtResource("1_8wyvt")
 piecesTextureAtlas = ExtResource("2_whjme")
 boardTheme = ExtResource("3_h2x5i")
+computerElo = 2800
 gameEndLabel = NodePath("Messages/VBoxContainer/GameEndLabel")
+rpsScene = ExtResource("18_irvb4")
 
 [node name="BoardGraphics" type="Node2D" parent="."]
 position = Vector2(540, 120)
